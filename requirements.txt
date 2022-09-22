@@ -1,3 +1,5 @@
+ffmpeg
+espeak
 PyPDF2
 pyttsx3
 streamlit

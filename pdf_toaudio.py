@@ -1,15 +1,16 @@
-from pickle import TRUE
-from queue import Empty
-from tkinter import Widget
-from turtle import onclick
 import PyPDF2,pyttsx3
 import streamlit as st
 def s():
     speak=pyttsx3.init()
+    ftext=""
     for pages in range(pdfReader.numPages):
         text=pdfReader.getPage(pages).extractText()
         speak.say(text)
-        speak.runAndWait()  
+        speak.runAndWait()
+        ftext=ftext+text 
+    if(st.button("Download Audio")):
+        speak.save_to_file(text,'PdfToAudio.mp3')
+        speak.runAndWait() 
     speak.stop()
 
 columns = st.columns((1, 1, 4))
@@ -24,5 +25,6 @@ if path:
     
     if(start):
         s()
+    
     
         
