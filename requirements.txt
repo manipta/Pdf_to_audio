@@ -2,3 +2,4 @@ ffmpeg
 PyPDF2
 pyttsx3
 streamlit
+keyboard
