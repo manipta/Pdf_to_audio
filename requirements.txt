@@ -3,4 +3,3 @@ PyPDF2
 pyttsx3
 streamlit
 keyboard
-libespeak-dev
